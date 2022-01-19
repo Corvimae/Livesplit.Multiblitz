@@ -1,5 +1,5 @@
-## LiveSplit.Counter
-A Simple counter component for LiveSplit. 
+## LiveSplit.Multiblitz
+Livesplit component for reporting to a nodecg-multiblitz instance.
 
 ## Packages / Requirements
 
