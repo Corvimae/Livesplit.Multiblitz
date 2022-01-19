@@ -53,18 +53,18 @@ namespace LiveSplit.UI.Components {
     }
 
     private void State_OnStart(object sender, EventArgs e) {
-      SendStartMessage().RunSynchronously();
+      new Task(async () => await SendStartMessage()).RunSynchronously();
     }
 
     private void State_OnSplit(object sender, EventArgs e) {
       if (state.CurrentPhase == TimerPhase.Ended) {
-        SendStopMessage().RunSynchronously();
+        new Task(async () => await SendStopMessage()).RunSynchronously();
       }
     }
 
     private void State_OnReset(object sender, TimerPhase e) {
       if (e != TimerPhase.Ended) {
-        SendStopMessage().RunSynchronously();
+        new Task(async () => await SendStopMessage()).RunSynchronously();
       }
     }
     private long UnixTimestampFromDateTime(DateTime date) {
