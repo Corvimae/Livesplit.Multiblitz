@@ -1,5 +1,5 @@
 ## LiveSplit.Multiblitz
-Livesplit component for reporting to a nodecg-multiblitz instance.
+Livesplit component for reporting to a [nodecg-multiblitz](https://github.com/Corvimae/nodecg-multiblitz) instance.
 
 ## Packages / Requirements
 
