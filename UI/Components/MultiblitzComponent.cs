@@ -97,7 +97,7 @@ namespace LiveSplit.UI.Components {
 
     private async Task<bool> SendStartMessage() {
       try {
-        var response = await client.GetAsync($"{settings.ServerHostname}/multiblitz/start?key={settings.UserKey}&time={UnixTimestampFromDateTime(state.AttemptStarted.Time.ToUniversalTime())}");
+        var response = await client.GetAsync($"{settings.ServerHostname}/multiblitz/start?key={settings.UserKey}&time={UnixTimestampFromDateTime(state.AttemptStarted.Time.ToUniversalTime())}&offset={state.Run.Offset.TotalMilliseconds}");
 
         return response.StatusCode == System.Net.HttpStatusCode.OK;
       } catch (Exception ex) {
